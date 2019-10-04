@@ -51,7 +51,6 @@
 			if (!$conn) {
 				die("Connection is not successful " . $conn->connect_error);
 			}
-			echo "You connected to the database!";
 
 			if(isset($_GET['title']) && isset($_GET['author']) && isset($_GET['isbn']) && isset($_GET['description']) &&
 		       isset($_GET['publ_date']) && isset($_GET['publ_date'])) {

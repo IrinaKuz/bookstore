@@ -29,26 +29,27 @@
             <a href="add_book.php">Add book</a>
           </p>
           <ul>
-            <li><a href="romance.php">Romance</a></li>
-            <li><a href="fantasy.php">Fantasy</a></li>
-            <li><a href="sci_fi.php">Sci-fi</a></li>
-            <li><a href="western.php">Western</a></li>
-            <li><a href="thriller.php">Thriller</a></li>
-            <li><a href="mystery.php">Mystery</a></li>
-            <li><a href="biography.php">Biography</a></li>
-            <li><a href="h_fiction.php">Historical fiction</a></li>
-            <li><a href="non_fiction.php">Non-fiction</a></li>
-            <li><a href="textbook.php">Textbook</a></li>
-            <li><a href="poetry.php">Poetry</a></li>
-            <li><a href="child_literature.php">Children&apos;s literature</a></li>
+            <li>Romance</li>
+            <li>Fantasy</li>
+            <li>Sci-fi</li>
+            <li>Western</li>
+            <li>Thriller</li>
+            <li>Mystery</li>
+            <li>Biography</li>
+            <li>Historical fiction</li>
+            <li>Non-fiction</li>
+            <li>Textbook</li>
+            <li>Poetry</li>
+            <li>Children&apos;s literature</li>
           </ul>
         </aside>
         <main>
         	<p><a href="index.php">All books</a></p> 
-        	<?php
+        	<div id="query_result">
+            <?php
 
         	// open connection
-			$conn = new mysqli(, , , );
+			$conn = new mysqli();
 			if (!$conn) {
 				die("Connection is not successful " . $conn->connect_error);
 			}
@@ -79,6 +80,7 @@
 			if (!$result) {
 				echo "Error: " + $conn->error;
 			} else {
+                echo mysqli_num_rows($result) . ' result(s)';
 				if ($result->num_rows > 0) {
 					// output data of each row
 					while ($row = $result->fetch_assoc()) {
@@ -91,13 +93,14 @@
 					    		<p class=\"publ_date\"> ". $row['publ_date'] . "</p>
 					  		</div>";
  
-				}
-			} 
+				    }
+			    } 
 			} ?>
-
+            </div>
         </main>
       </div>
       <footer></footer>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
