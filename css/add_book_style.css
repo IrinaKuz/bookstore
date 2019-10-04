@@ -1,0 +1,33 @@
+.pg_wrapper{
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: #ffffff;
+	text-align: center;
+	padding: 0 0 1em 0;
+}
+h2{
+	padding: 1em;
+}
+label{
+	display: inline-block;
+	margin: 1em 0;
+	width: 120px;
+	text-align: left;
+}
+.pg_wrapper input[type="text"] {
+	padding: 0.6em;
+	width: 300px;
+}
+.pg_wrapper input[type="submit"] {
+	display: block;
+	background-color: #2F4F4F;
+	color: #ffffff;
+	padding: 1em;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	text-align: center;
+	width: 100px;
+	margin: auto;
+	cursor: pointer;
+}

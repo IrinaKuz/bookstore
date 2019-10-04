@@ -1,0 +1,111 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: #E0FFFF;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+.wrapper{
+  max-width: 1200px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+.wrapper a,
+.wrapper a:hover,
+.wrapper a:visited{
+  text-decoration: none;
+  color: #000000;
+}
+header{
+  display: flex;
+  align-items: center;
+  padding: 1em 0;
+}
+h1{
+  flex: 3;
+  text-align: center;
+}
+header .emp{
+  font-style: italic;
+  font-family: "Georgina", serif;
+  font-size: 2em;
+  vertical-align: center;
+  color: #800000;
+}
+header ul{
+  list-style-type: none;
+  flex: 1;
+}
+header ul li{
+  font-size: 0.9em;
+  margin: 0.5em 0;
+}
+
+/* Search */
+#search{
+  background-color: #2F4F4F;
+  text-align: center;
+  padding: 1em 0;
+}
+.page{
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* aside panel */
+aside{
+  flex: 1;
+  background-color: #FFFACD;
+  height: 100vh;
+  text-align: center;
+}
+aside ul{
+  list-style-type: none;
+}
+aside ul li{
+  border-top: 0.5px solid #ffffff;
+  font-size: 0.9em;
+  color: #2F4F4F;
+  cursor: pointer;
+}
+aside li a,
+aside li a:hover,
+aside li a:visited {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  padding: 1.2em;
+}
+aside .add_book a{
+  display: inline-block;
+  text-decoration: none;
+  background-color: #2F4F4F;
+  color: #ffffff;
+  padding: 1em;
+  font-variant: small-caps;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 1em;
+}
+main{
+  flex: 3;
+  background-color: #ffffff;
+  padding: 1em 2em;
+}
+.book_wrapper {
+  clear: both;
+  overflow: hidden;
+  margin: 1em 0;
+}
+.book_wrapper img{
+  width: 150px;
+  height: 200px;
+  display: block;
+  float: left;
+  margin: 0 1em 1em 0;
+}
